@@ -42,7 +42,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #app {
   min-height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: #fff;
 }
 
 .excel {
