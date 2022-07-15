@@ -4,6 +4,7 @@ import {
   CHANGE_TITLE,
   CURRENT_STYLE,
   TABLE_RESIZE,
+  UPDATE_DATE,
 } from './types'
 
 export function rootReducer(state, action) {
@@ -24,7 +25,7 @@ export function rootReducer(state, action) {
     case CURRENT_STYLE:
       return {...state, currentStyles: action.data}
     case APPLY_STYLE:
-      field = 'stylesState'
+      field = 'styleState'
       val = state[field] || {}
       action.data.ids.forEach(id => {
         val[id] = {...val[id], ...action.data.value}
@@ -36,6 +37,8 @@ export function rootReducer(state, action) {
       }
     case CHANGE_TITLE:
       return {...state, title: action.data}
+    case UPDATE_DATE:
+      return {...state, openedDate: new Date().toJSON()}
     default:
       return state
   }
