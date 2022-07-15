@@ -3,7 +3,8 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "rules": {
     "prettier/prettier": [
@@ -25,6 +26,7 @@
     "prettier"
   ],
   "plugins": [
-    "prettier"
+    "prettier",
+    "jest"
   ]
 }
