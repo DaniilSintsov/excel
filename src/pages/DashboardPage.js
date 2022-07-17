@@ -8,13 +8,7 @@ export class DashboardPage extends Page {
     return $.create('div', 'db').html(/* html */ `
       <div class="db">
         <div class="db__header">
-          <a href="#">Таблицы</a>
-          <form class="db__form" action="#">
-            <button type="submit">
-              <span class="material-icons">search</span>
-            </button>
-            <input type="search" placeholder="Поиск">
-          </form>
+          <h1>Таблицы - панель управления</h1>
         </div>
 
         <div class="db__new">
