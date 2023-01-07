@@ -1,7 +1,7 @@
-import {ExcelStateComponent} from '@core/ExcelStateComponent'
-import {createToolbar} from './toolbar.template'
-import {$} from '@core/Dom'
-import {defaultStyles} from '@/constants'
+import { ExcelStateComponent } from '@core/ExcelStateComponent'
+import { createToolbar } from './toolbar.template'
+import { $ } from '@core/Dom'
+import { defaultStyles } from '@/constants'
 
 export class Toolbar extends ExcelStateComponent {
   static className = 'toolbar'
@@ -11,7 +11,7 @@ export class Toolbar extends ExcelStateComponent {
       name: 'Toolbar',
       listeners: ['click'],
       subscribe: ['currentStyles'],
-      ...options,
+      ...options
     })
   }
 

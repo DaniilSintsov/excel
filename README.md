@@ -1,6 +1,6 @@
-# excel
+# Excel
 
-The analogue of Microsoft Excel on pure JavaScript You can use about link: https://daniilsintsov.github.io/excel/
+The analogue of Microsoft Excel on pure JavaScript. [Demo](https://daniilsintsov.github.io/excel/)
 
 ## Features
 

@@ -1,12 +1,17 @@
-import {ExcelComponent} from '@core/ExcelComponent'
-import {createTable} from './table.template'
-import {resizeHandler} from './table.resize'
-import {shouldResize, isCell, matrix, findNextSelector} from './table.functions'
-import {TableSelection} from './TableSelection'
-import {$} from '@core/Dom'
+import { ExcelComponent } from '@core/ExcelComponent'
+import { createTable } from './table.template'
+import { resizeHandler } from './table.resize'
+import {
+  shouldResize,
+  isCell,
+  matrix,
+  findNextSelector
+} from './table.functions'
+import { TableSelection } from './TableSelection'
+import { $ } from '@core/Dom'
 import * as actions from '@/redux/actions'
-import {defaultStyles} from '@/constants'
-import {parse} from '@core/parse'
+import { defaultStyles } from '@/constants'
+import { parse } from '@core/parse'
 
 export class Table extends ExcelComponent {
   static className = 'table'
@@ -15,7 +20,7 @@ export class Table extends ExcelComponent {
     super($root, {
       name: 'Table',
       listeners: ['mousedown', 'keydown', 'input'],
-      ...options,
+      ...options
     })
   }
 
@@ -45,7 +50,7 @@ export class Table extends ExcelComponent {
       this.$emit(
         actions.applyStyle({
           value,
-          ids: this.selection.selectedIds,
+          ids: this.selection.selectedIds
         })
       )
     })
@@ -90,10 +95,10 @@ export class Table extends ExcelComponent {
       'ArrowLeft',
       'ArrowRight',
       'ArrowDown',
-      'ArrowUp',
+      'ArrowUp'
     ]
 
-    const {code} = event
+    const { code } = event
 
     if (keys.includes(code)) {
       event.preventDefault()
@@ -109,7 +114,7 @@ export class Table extends ExcelComponent {
     this.$emit(
       actions.changeText({
         id: this.selection.current.id(),
-        value,
+        value
       })
     )
   }

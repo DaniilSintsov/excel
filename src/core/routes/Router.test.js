@@ -1,6 +1,7 @@
-import {Router} from './Router'
-import {Page} from '../page/Page'
+import { Router } from './Router'
+import { Page } from '../page/Page'
 
+// eslint-disable-next-line no-unused-vars
 class DashboardPage extends Page {
   getRoot() {
     const root = document.createElement('div')
@@ -8,6 +9,7 @@ class DashboardPage extends Page {
     return root
   }
 }
+// eslint-disable-next-line no-unused-vars
 class ExcelPage extends Page {}
 
 describe('Router', () => {
@@ -17,7 +19,7 @@ describe('Router', () => {
   beforeEach(() => {
     router = new Router($root, {
       dasboard: '',
-      excel: '',
+      excel: ''
     })
   })
 

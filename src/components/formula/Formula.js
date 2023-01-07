@@ -1,5 +1,5 @@
-import {ExcelComponent} from '@core/ExcelComponent'
-import {$} from '../../core/Dom'
+import { ExcelComponent } from '@core/ExcelComponent'
+import { $ } from '../../core/Dom'
 
 export class Formula extends ExcelComponent {
   static className = 'formula'
@@ -9,7 +9,7 @@ export class Formula extends ExcelComponent {
       name: 'Formula',
       listeners: ['input', 'keydown'],
       subscribe: ['currentText'],
-      ...options,
+      ...options
     })
   }
 
@@ -34,7 +34,7 @@ export class Formula extends ExcelComponent {
     `
   }
 
-  storeChanged({currentText}) {
+  storeChanged({ currentText }) {
     this.$formula.text(currentText)
   }
 

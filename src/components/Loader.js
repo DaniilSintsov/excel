@@ -1,4 +1,4 @@
-import {$} from '@core/Dom'
+import { $ } from '@core/Dom'
 
 export function Loader() {
   return $.create('div', 'loader').html(`

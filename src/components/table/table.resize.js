@@ -1,4 +1,4 @@
-import {$} from '../../core/Dom'
+import { $ } from '../../core/Dom'
 
 export function resizeHandler($root, event) {
   return new Promise(resolve => {
@@ -11,18 +11,18 @@ export function resizeHandler($root, event) {
     let value
 
     $resizer.css({
-      [sideProp]: '-5000px',
+      [sideProp]: '-5000px'
     })
 
     document.onmousemove = e => {
       if (type === 'col') {
         const delta = e.pageX - coords.right
         value = coords.width + delta
-        $resizer.css({right: -delta + 'px'})
+        $resizer.css({ right: -delta + 'px' })
       } else {
         const delta = e.pageY - coords.bottom
         value = coords.height + delta
-        $resizer.css({bottom: -delta + 'px'})
+        $resizer.css({ bottom: -delta + 'px' })
       }
     }
 
@@ -31,19 +31,19 @@ export function resizeHandler($root, event) {
       document.onmouseup = null
 
       if (type === 'col') {
-        $parent.css({width: value + 'px'})
-        $resizer.css({bottom: 0, right: '-3px'})
+        $parent.css({ width: value + 'px' })
+        $resizer.css({ bottom: 0, right: '-3px' })
         cells.forEach(el => (el.style.width = value + 'px'))
       } else {
-        $parent.css({height: value + 'px'})
-        $resizer.css({right: 0, bottom: '-3px'})
+        $parent.css({ height: value + 'px' })
+        $resizer.css({ right: 0, bottom: '-3px' })
         cells.forEach(el => (el.style.height = value + 'px'))
       }
 
       resolve({
         value,
         type,
-        id: $parent.data[type],
+        id: $parent.data[type]
       })
     }
   })

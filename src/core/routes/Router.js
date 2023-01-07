@@ -1,6 +1,6 @@
-import {$} from '../Dom'
-import {ActiveRoute} from './ActiveRoute'
-import {Loader} from '../../components/Loader'
+import { $ } from '../Dom'
+import { ActiveRoute } from './ActiveRoute'
+import { Loader } from '../../components/Loader'
 
 export class Router {
   constructor(selector, routes) {

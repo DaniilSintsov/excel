@@ -1,10 +1,10 @@
-import {toInlineStyles} from '@core/utils'
-import {defaultStyles} from '@/constants'
-import {parse} from '@core/parse'
+import { toInlineStyles } from '@core/utils'
+import { defaultStyles } from '@/constants'
+import { parse } from '@core/parse'
 
 const CODES = {
   A: 65,
-  Z: 90,
+  Z: 90
 }
 const DEFAULT_WIDTH = 120
 const DEFAULT_HEIGHT = 24
@@ -24,7 +24,7 @@ function toCell(state, row) {
     const data = state.dataState[id]
     const styles = toInlineStyles({
       ...defaultStyles,
-      ...state?.styleState[id],
+      ...state?.styleState[id]
     })
 
     return /* html */ `
@@ -39,7 +39,7 @@ function toCell(state, row) {
   }
 }
 
-function toColumn({col, index, width}) {
+function toColumn({ col, index, width }) {
   return /* html */ `
     <div class="table__column"
          data-type="resizable"
@@ -80,7 +80,7 @@ function withWidthFrom(state) {
     return {
       col,
       index,
-      width: getWidth(state.colState, index),
+      width: getWidth(state.colState, index)
     }
   }
 }

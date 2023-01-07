@@ -1,4 +1,4 @@
-const {debounce} = require('../utils')
+const { debounce } = require('../utils')
 
 export class StateProcessor {
   constructor(client, delay = 300) {

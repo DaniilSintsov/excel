@@ -4,41 +4,41 @@ import {
   CHANGE_TITLE,
   CURRENT_STYLE,
   TABLE_RESIZE,
-  UPDATE_DATE,
+  UPDATE_DATE
 } from './types'
 
 export function tableResize(data) {
   return {
     type: TABLE_RESIZE,
-    data,
+    data
   }
 }
 
 export function changeText(data) {
   return {
     type: CHANGE_TEXT,
-    data,
+    data
   }
 }
 
 export function changeStyles(data) {
   return {
     type: CURRENT_STYLE,
-    data,
+    data
   }
 }
 
 export function applyStyle(data) {
   return {
     type: APPLY_STYLE,
-    data,
+    data
   }
 }
 
 export function changeTitle(data) {
   return {
     type: CHANGE_TITLE,
-    data,
+    data
   }
 }
 

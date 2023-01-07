@@ -80,7 +80,7 @@ class Dom {
       const parsed = this.id().split(':')
       return {
         row: +parsed[0],
-        col: +parsed[1],
+        col: +parsed[1]
       }
     }
     return this.data.id

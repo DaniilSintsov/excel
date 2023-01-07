@@ -1,4 +1,4 @@
-import {range} from '@core/utils'
+import { range } from '@core/utils'
 
 export function shouldResize(event) {
   return event.target.dataset.resize
@@ -21,7 +21,7 @@ export function matrix($target, $current) {
   }, [])
 }
 
-export function findNextSelector(code, {col, row}) {
+export function findNextSelector(code, { col, row }) {
   const MIN_VALUE = 0
 
   switch (code) {
